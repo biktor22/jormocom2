@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Emscripten-Generated Code</title>
+   
+  </head>
+  <body style="background-color:black;">
+
+<table bordercolor="#1f1f1f"style="border-collapse: collapse; width: 80%; margin-left: 10%;height: 58px;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 100%; height: 18px;"><img src="Xirustation_logo.png" style="display: block; margin-left: auto; margin-right: auto;"> </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 100%; height: 22px;">
+<table bordercolor="#1f1f1f"style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 50%;">
+<table bordercolor="#1f1f1f"style="border-collapse: collapse; width: 100%; height: 148px;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 100%; height: 18px; color:white;">1) Selecciona el Juego:<br></td>
+</tr>
+<tr style="height: 112px;">
+<td style="width: 100%; height: 112px;"><select id="selectRom" style="width: 80%; margin-left: 10%;" name="Juegos" size="20">
+<option value="Merceders">Aventura en el Chaco 2</option>
+<option value="BMW">Gangs of Pedro Juan Caballero</option>
+<option value="Jaguar">Guerrilleros del Chaco</option>
+<option value="Lamborghini">El Vampiro de Yparacai</option>
+<option value="Ferrari">Los Hermanos Mario</option>
+<option value="Ford">Los Hermanos Mario 2</option>
+<option value="Merceders">Gangs of Pedro Juan Caballero</option>
+<option value="BMW">Paraguayan Ninja II</option>
+<option value="Jaguar">Fuerza Aerea Paraguaya 2022</option>
+<option value="Lamborghini">El Vampiro de Yparacai</option>
+<option value="Ferrari">Los Hermanos Mario</option>
+<option value="Ford">Los Hermanos Mario 2</option><option value="Merceders">Gangs of Pedro Juan Caballero</option>
+<option value="BMW">Paraguayan Ninja II</option>
+<option value="Jaguar">Fuerza Aerea Paraguaya 2022</option>
+<option value="Lamborghini">El Vampiro de Yparacai</option>
+<option value="Ferrari">Los Hermanos Mario</option>
+<option value="Ford">Los Hermanos Mario 2</option><option value="Merceders">Gangs of Pedro Juan Caballero</option>
+<option value="BMW">Paraguayan Ninja II</option>
+<option value="Jaguar">Fuerza Aerea Paraguaya 2022</option>
+<option value="Lamborghini">El Vampiro de Yparacai</option>
+<option value="Ferrari">Los Hermanos Mario</option>
+<option value="Ford">Los Hermanos Mario 2</option>
+</select></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 100%; height: 18px; color:white;">
+<br>2) Presiona el Boton Empezar:
+<button onclick="cargaRom()" style="width: 40%; height: 36px; margin-left: 5%;" type="&quot;button"> << EMPEZAR LA BATALLA! >></button></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="width: 60%;">
+
+      <canvas style="margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; display: block;" class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+<table bordercolor="#1f1f1f"style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 50%; color:white;">3) Como jugar:<br> <img src="Instruccion.png"></td>
+<td style="width: 50%;"><img src="Pirateria.png" align:right></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 100%; height: 18px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<script type='text/javascript'>
+
+	function apagaUrl() {
+		 window.history.replaceState('','','/');
+	};
+
+	function cargaRom() {
+		var laRom = document.getElementById("selectRom").selectedIndex;
+		switch(laRom) {
+			case 0:
+				window.location = "startemul.html?id=0";
+				break;
+			case 1:
+				window.location = "startemul.html?id=1";
+				break;
+			case 2:
+				window.location = "startemul.html?id=2";
+				break;
+
+		}
+	};
+ 
+      var Module = {
+        preRun: [],
+        postRun: [],
+        
+        canvas: (function() {
+          var canvas = document.getElementById('canvas');
+          return canvas;
+        })(),
+        
+        
+      };
+     
+     
+    </script>
+    <script async type="text/javascript" src="home.js"></script>
+
+  </body>
+</html>
+
